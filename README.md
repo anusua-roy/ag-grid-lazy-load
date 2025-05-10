@@ -46,6 +46,7 @@ npm run dev
 
 ## 📁 Project Structure
 
+```
 src/
 ├── components/
 │   └── sections/         # Modular sections like Introduction, Tables, React Lazy, etc.
@@ -55,6 +56,7 @@ src/
 │   └── Overview.tsx      # Main landing page with full documentation
 ├── App.tsx               # Layout + router
 └── main.tsx              # Vite entry
+```
 
 ---
 
