@@ -45,6 +45,7 @@ npm run dev
 ---
 
 ## 📁 Project Structure
+
 src/
 ├── components/
 │   └── sections/         # Modular sections like Introduction, Tables, React Lazy, etc.
@@ -58,6 +59,7 @@ src/
 ---
 
 ## 🧠 Why This Project
+
 This app demonstrates:
 
 - How to apply performance-focused architecture
