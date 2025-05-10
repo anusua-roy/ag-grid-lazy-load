@@ -46,6 +46,7 @@ npm run dev
 
 ## 📁 Project Structure
 
+```
 src/
 ├── components/
 │   └── sections/         # Modular sections like Introduction, Tables, React Lazy, etc.
@@ -55,6 +56,7 @@ src/
 │   └── Overview.tsx      # Main landing page with full documentation
 ├── App.tsx               # Layout + router
 └── main.tsx              # Vite entry
+```
 
 ---
 
@@ -84,5 +86,3 @@ MIT
 - [ ] Replace the starter README with the above
 - [ ] Add screenshots / gifs once your demos are live
 - [ ] Optionally add a live hosted link (Netlify, Vercel)
-
-Want help writing the portfolio **project summary** for your portfolio site as well?
