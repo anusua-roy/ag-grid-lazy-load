@@ -3,9 +3,15 @@
 import WhyLazyLoading from "../components/sections/WhyLazyLoading";
 import LazyLoadingTypes from "../components/sections/LazyLoadingTypes";
 import LiveDemos from "../components/sections/LiveDemos";
+import Introduction from "../components/sections/Introduction";
+import AlternativesToLazyLoading from "../components/sections/AlternativesToLazyLoading";
+import LazyLoadingInTables from "../components/sections/LazyLoadingInTables";
+import LazyLoadingInReact from "../components/sections/LazyLoadingInReact";
+import RealWorldExample from "../components/sections/RealWorldExample";
+import SummaryAndBestPractices from "../components/sections/SummaryAndBestPractices";
 
 const sections = [
-  { id: "intro", title: "Introduction" },
+  { id: "intro", title: "Introduction", Component: Introduction },
   {
     id: "why",
     title: "Why Use Lazy Loading (Pros, Cons & Comparisons)",
@@ -16,15 +22,35 @@ const sections = [
     title: "Types of Lazy Loading – Deep Dive",
     Component: LazyLoadingTypes,
   },
-  { id: "alternatives", title: "Alternatives to Lazy Loading" },
-  { id: "tables", title: "Lazy Loading in Tables" },
-  { id: "react", title: "Lazy Loading in React" },
-  { id: "example", title: "Real World Example: This Page" },
-  { id: "summary", title: "Summary & Best Practices" },
+  {
+    id: "alternatives",
+    title: "Alternatives to Lazy Loading",
+    Component: AlternativesToLazyLoading,
+  },
+  {
+    id: "tables",
+    title: "Lazy Loading in Tables",
+    Component: LazyLoadingInTables,
+  },
+  {
+    id: "react",
+    title: "Lazy Loading in React",
+    Component: LazyLoadingInReact,
+  },
+  {
+    id: "example",
+    title: "Real World Example: This Page",
+    Component: RealWorldExample,
+  },
+  {
+    id: "summary",
+    title: "Summary & Best Practices",
+    Component: SummaryAndBestPractices,
+  },
   {
     id: "demos",
     title: "Live Demos",
-    Component: () => <LiveDemos />,
+    Component: LiveDemos,
   },
 ];
 
