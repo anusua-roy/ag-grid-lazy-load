@@ -45,6 +45,52 @@ const RealWorldExample = () => {
       </div>
 
       <div>
+        <h3 className="text-lg font-semibold">
+          Handling Hash Navigation with Lazy Loading
+        </h3>
+        <p className="text-sm text-gray-700">
+          One key challenge when using lazy loading with a left-hand navigation
+          that uses
+          <code className="mx-1 font-[Consolas,monospace]">#hash</code> anchors
+          is that if the target section hasn’t mounted yet, the browser cannot
+          scroll to it.
+        </p>
+        <ul className="list-disc list-inside text-sm text-gray-700 mt-2">
+          <li>
+            Always render an empty wrapper{" "}
+            <code className="font-[Consolas,monospace]">
+              &lt;section id="..."&gt;
+            </code>{" "}
+            with the correct{" "}
+            <code className="font-[Consolas,monospace]">id</code>, even if its
+            content is lazy-loaded
+          </li>
+          <li>
+            Inside the wrapper, use{" "}
+            <code className="font-[Consolas,monospace]">Suspense</code> and{" "}
+            <code className="font-[Consolas,monospace]">React.lazy</code> to
+            defer actual content
+          </li>
+          <li>
+            This ensures anchor links work and content is still lazily loaded
+          </li>
+        </ul>
+        <p className="text-sm text-gray-700 mt-2">
+          Alternatively, anchor scrolling can be replaced with manual
+          scroll-to-element logic using
+          <code className="mx-1 font-[Consolas,monospace]">
+            element.scrollIntoView()
+          </code>{" "}
+          after the component has been loaded.
+        </p>
+        <p className="text-sm text-gray-700 mt-1">
+          However, this breaks native browser scroll behavior and is less
+          accessible, so the hybrid wrapper + lazy content approach is
+          recommended.
+        </p>
+      </div>
+
+      <div>
         <h3 className="text-lg font-semibold">Next Steps</h3>
         <p className="text-sm text-gray-700">
           Once the content and design stabilize, we’ll explore section-level
