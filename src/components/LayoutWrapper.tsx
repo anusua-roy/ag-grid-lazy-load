@@ -1,6 +1,7 @@
 import { type ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { FiArrowLeft, FiGithub } from "react-icons/fi";
+import { FiArrowLeft } from "react-icons/fi";
+import { FaGithub } from "react-icons/fa";
 
 interface LayoutWrapperProps {
   title: string;
@@ -28,9 +29,13 @@ export default function LayoutWrapper({
           href={`https://github.com/anusua-roy/ag-grid-lazy-load/blob/main/src/components/${githubPath}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-3 py-1 bg-gray-800 text-white rounded hover:bg-gray-700"
+          className="inline-flex items-center gap-3 bg-black text-white px-4 py-2 rounded-md hover:opacity-90 transition"
         >
-          <FiGithub /> View on GitHub
+          {/* GitHub icon in white circle */}
+          <span className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
+            <FaGithub className="text-white w-full h-full" />
+          </span>
+          <span className="font-semibold text-sm">View on GitHub</span>
         </a>
       </div>
 
